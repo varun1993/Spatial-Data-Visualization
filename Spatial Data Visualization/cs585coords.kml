@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Placemark><name>Gateway</name>
+<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.279522,34.023433</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Track</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.287590,34.021832</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Lyon Center</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.288341,34.024286</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Campus Center</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.286066,34.020160</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Coliseum</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.286066,34.014060</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Rose Garden</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.286088,34.017137</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Galen Center</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.280251,34.021121</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Ronald Tutor Hall</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.289853,34.020027</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Leavey</name>
+	<styleUrl>#z1</styleUrl>
+	<Point>
+		<coordinates>-118.282762,34.021752</coordinates>
+	</Point>
+</Placemark>
+
+<Placemark><name>Convex Hull</name>
+	<Polygon>
+		<outerBoundaryIs>
+			<LinearRing>  
+				<coordinates>
+					-118.286066,34.01406,0
+					-118.289853,34.020027,0
+					-118.288341,34.024286,0
+					-118.279522,34.023433,0
+					-118.280251,34.021121,0
+					-118.286066,34.01406,0
+				</coordinates>
+			</LinearRing>
+		</outerBoundaryIs>
+	</Polygon>
+ 
+	<Style> 
+		<PolyStyle>  
+			<color>#880000ff</color>
+		</PolyStyle> 
+	</Style>
+</Placemark>
+
+<Placemark><name>Gateway to Galen Center</name>
+      <LineString>
+      	<extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+        	-118.279522,34.023433,0
+        	-118.280251,34.021121,0
+        </coordinates>
+      </LineString>
+
+      <Style> 
+		<LineStyle>  
+			<color>#ff00ff00</color>
+			<width>5</width>
+		</LineStyle> 
+	</Style>
+</Placemark>
+<Placemark><name>Gateway to Leavey</name>
+      <LineString>
+      	<extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+        	-118.279522,34.023433,0
+        	-118.282762,34.021752,0
+        </coordinates>
+      </LineString>
+
+      <Style> 
+		<LineStyle>  
+			<color>#ff00ffff</color>
+			<width>5</width>
+		</LineStyle> 
+	</Style>
+</Placemark>
+<Placemark><name>Gateway to Campus Center</name>
+      <LineString>
+      	<extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+        	-118.279522,34.023433,0
+        	-118.286066,34.020160,0
+        </coordinates>
+      </LineString>
+
+      <Style> 
+		<LineStyle>  
+			<color>#ff00ff00</color>
+			<width>5</width>
+		</LineStyle> 
+	</Style>
+</Placemark>
+
+</Document></kml>

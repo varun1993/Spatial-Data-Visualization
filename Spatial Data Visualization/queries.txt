@@ -1,0 +1,31 @@
+CREATE EXTENSION postgis
+
+CREATE TABLE places (label varchar);
+
+SELECT AddGeometryColumn('places', 'point', -1, 'POINT', 2);
+
+INSERT INTO places (label, point) VALUES
+('Gateway Apartment', ST_GeomFromText('POINT(-118.279522 34.023433)', -1)),
+('Track', ST_GeomFromText('POINT(-118.287590 34.021832)', -1)),
+('Lyon Center', ST_GeomFromText('POINT(-118.288341 34.024286)', -1)),
+('Campus Center', ST_GeomFromText('POINT(-118.286066 34.020160)', -1)),
+('Coliseum', ST_GeomFromText('POINT(-118.286066 34.014060)', -1)),
+('Rose Garden', ST_GeomFromText('POINT(-118.286088 34.017137)', -1)),
+('Galen Center', ST_GeomFromText('POINT(-118.280251 34.021121)', -1)),
+('RTH', ST_GeomFromText('POINT(-118.289853 34.020027)', -1)),
+('Leavey', ST_GeomFromText('POINT(-118.282762 34.021752)', -1));
+
+
+
+
+ALTER TABLE places ADD COLUMN area varchar(20) DEFAULT 'school’;
+
+SELECT area, ST_ConvexHull(ST_Collect(point)) as polygon FROM places GROUP BY area;
+
+SELECT ST_AsText(ST_Polygonize(polygon)) FROM (SELECT area, ST_ConvexHull(ST_Collect(point)) as polygon FROM places GROUP BY area) as a;
+
+
+
+
+
+SELECT p2.label AS label, p2.point AS point FROM places AS p1, places AS p2 WHERE p1.label = 'Gateway Apartment' AND p1.label <> p2.label ORDER BY ST_Distance(p1.point, p2.point) LIMIT 3;
